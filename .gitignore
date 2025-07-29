@@ -1,0 +1,55 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Environment variables
+.env
+.env.*
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# OS information or diagnostic dump files (if any)
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# Test coverage
+coverage/
+
+# Windows-specific
+*.ps1
+*.cmd
+*.bat
+ehthumbs.db
+Desktop.ini
+
+# Ignore local temp files or debug info
+*.local
+*.tgz
+
+# Ignore files created by node's os module
+C:\Users\plawa\AppData\Local\Temp/
