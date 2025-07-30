@@ -1,1 +1,6 @@
 this is an example page.
+IoT, or Internet of Things, refers to the network of consumer devices like smart homes, wearables, and appliances that connect to the internet to improve daily life convenience.
+
+IIoT, or Industrial Internet of Things, is a subset of IoT that focuses on industrial applications like manufacturing, energy, and logistics. It connects machines, sensors, and control systems to enable automation, predictive maintenance, and real-time monitoring.
+
+The key difference lies in purpose and reliability: IoT is consumer-focused and can tolerate some downtime, whereas IIoT is mission-critical, demanding high reliability, security, and low latency, as any failure can lead to huge operational or safety risks.
