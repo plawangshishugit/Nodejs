@@ -81,13 +81,23 @@ const lodash = require('lodash');
 // const reversed = lodash.reverse(numbers);
 // console.log('Reversed array:', reversed);
 
-const readablestream = fs.createReadStream('example.txt', { encoding: 'utf8' });
-readablestream.on('data', (chunk) => {
-  console.log('Received chunk:', chunk);
+// const readablestream = fs.createReadStream('example.txt', { encoding: 'utf8' });
+// readablestream.on('data', (chunk) => {
+//   console.log('Received chunk:', chunk);
+// });
+// readablestream.on('end', () => {
+//   console.log('Stream ended');
+// });
+// readablestream.on('error', (err) => {
+//   console.error('Stream error:', err);
+// });
+
+const writeablestream = fs.createWriteStream('output.txt', { encoding: 'utf8' });
+writeablestream.write('Hello, this is a test message.\n');  
+writeablestream.write('This is another line.\n');
+writeablestream.end(() => {
+  console.log('Write stream ended');
 });
-readablestream.on('end', () => {
-  console.log('Stream ended');
-});
-readablestream.on('error', (err) => {
-  console.error('Stream error:', err);
+writeablestream.on('finish', () => {
+  console.log('All data has been written to the file.');
 });
