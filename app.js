@@ -92,12 +92,20 @@ const lodash = require('lodash');
 //   console.error('Stream error:', err);
 // });
 
-const writeablestream = fs.createWriteStream('output.txt', { encoding: 'utf8' });
-writeablestream.write('Hello, this is a test message.\n');  
-writeablestream.write('This is another line.\n');
-writeablestream.end(() => {
-  console.log('Write stream ended');
-});
-writeablestream.on('finish', () => {
-  console.log('All data has been written to the file.');
-});
+// const writeablestream = fs.createWriteStream('output.txt', { encoding: 'utf8' });
+// writeablestream.write('Hello, this is a test message.\n');  
+// writeablestream.write('This is another line.\n');
+// writeablestream.end(() => {
+//   console.log('Write stream ended');
+// });
+// writeablestream.on('finish', () => {
+//   console.log('All data has been written to the file.');
+// });
+
+const readablestream = fs.createReadStream('example.txt');
+const writablestream = fs.createWriteStream('output.txt');
+
+readablestream.pipe(writablestream);
+writablestream.on('finish',()=>{
+  console.log('Data has been piped and written to output.txt'); 
+})
